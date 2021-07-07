@@ -932,7 +932,7 @@ contract RealFevrToken is ERC20, Ownable, UsingLiquidityProtectionService {
 
     // How the protection gets disabled.
     function protectionChecker() internal view override returns(bool) {
-         return ProtectionSwitch_timestamp(1624924799); // Switch off protection on  Monday, June 28, 2021 11:59:59 PM GTM.
+         return ProtectionSwitch_timestamp(1626652799); // Switch off protection on  Sunday, July 18, 2021 11:59:59 PM.
         // return ProtectionSwitch_block(13000000); // Switch off protection on block 13000000.
 //        return ProtectionSwitch_manual(); // Switch off protection by calling disableProtection(); from owner. Default.
     }
@@ -942,7 +942,7 @@ contract RealFevrToken is ERC20, Ownable, UsingLiquidityProtectionService {
         return 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c; // WBNB
     }
 
-    constructor(address _distributionContract) public ERC20('RealFevr', 'FEVR') {
+    constructor(address _distributionContract) public ERC20('FevrToken', 'FEVR') {
         _mint(_distributionContract, 16000000000 * 1e18);
     }
 }
